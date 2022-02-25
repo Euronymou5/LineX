@@ -3,12 +3,6 @@ import requests
 import os
 import time
 
-def clear():
-  if os.name == "nt":
-    os.system("cls")
-  else:
-    os.system("clear")
-
 logo = """\033[34m ▄▀▀▀▀▄     ▄▀▀█▀▄    ▄▀▀▄ ▀▄  ▄▀▀█▄▄▄▄  ▄▀▀▄  ▄▀▄ 
 █    █     █   █  █  █  █ █ █ ▐  ▄▀   ▐ █    █   █ 
 ▐    █     ▐   █  ▐  ▐  █  ▀█   █▄▄▄▄▄  ▐     ▀▄▀  
@@ -18,7 +12,7 @@ logo = """\033[34m ▄▀▀▀▀▄     ▄▀▀█▀▄    ▄▀▀▄ ▀
   ▐        ▐       ▐ ▐         ▐         █    ▐   """
 
 def info():
-  clear()
+  os.system("clear")
   print(logo)
   key = "d0f8d48fb6cccba08753c1ed51fffae5"
   print('[~] Ejemplo: 14158586273')
@@ -33,7 +27,7 @@ def info():
   
 
 def menu():
-  clear()
+  os.system("clear")
   print(logo)
   print('\n[1] Buscar informacion de un numero')
   print('[99] Salir')
