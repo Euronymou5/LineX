@@ -5,7 +5,8 @@
 
 **• Con soporte para 232 Paises**
 
-**• Uso y instalacion:**
+# Instalacion
+**• Kali Linux / Termux / Ubuntu / Parrot OS:**
 ```
 # Instalamos Git
 
@@ -34,7 +35,9 @@ pip install requests
 ```
 # Iniciamos la herramienta
 
-python3 run.py
+(Linux / Termux): python3 linex.py   
+
+(Windows):  python linex_win.py
 ```
 
 **Testeado en:**
@@ -42,3 +45,5 @@ python3 run.py
 **• Android (Termux): ✔**
 
 **• Linux (Debian): ✔**
+
+**• Windows: ✔**
