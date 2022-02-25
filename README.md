@@ -39,8 +39,8 @@ python3 run.py
 
 **Testeado en:**
 
-**• Termux: ✔ **
+**• Android (Termux): ✔**
 
-**Linux (Debian): ✔**
+**• Linux (Debian): ✔**
 
-**Windows: ✔**
+**• Windows: ✔**
