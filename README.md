@@ -5,8 +5,7 @@
 
 **• Con soporte para 232 Paises**
 
-# Instalacion
-**• Kali Linux / Termux / Ubuntu / Parrot OS:**
+**• Instalacion y uso:**
 ```
 # Instalamos Git
 
