@@ -5,7 +5,7 @@
 
 **• Con soporte para 232 Paises**
 
-**Uso y instalacion: **
+**• Uso y instalacion: **
 ```
 # Instalamos Git
 
