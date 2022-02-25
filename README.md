@@ -42,5 +42,3 @@ python3 run.py
 **• Android (Termux): ✔**
 
 **• Linux (Debian): ✔**
-
-**• Windows: ✔**
