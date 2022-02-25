@@ -5,7 +5,7 @@
 
 **• Con soporte para 232 Paises**
 
-**• Uso y instalacion: **
+**• Uso y instalacion:**
 ```
 # Instalamos Git
 
@@ -41,6 +41,6 @@ python3 run.py
 
 **• Termux: ✔ **
 
-**Linux (Debian): ✔ **
+**Linux (Debian): ✔**
 
-**Windows: ✔ **
+**Windows: ✔**
