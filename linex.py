@@ -14,7 +14,7 @@ logo = """\033[34m ▄▀▀▀▀▄     ▄▀▀█▀▄    ▄▀▀▄ ▀
 def info():
   os.system("clear")
   print(logo)
-  key = "d0f8d48fb6cccba08753c1ed51fffae5"
+  key = "11d0c16488f95e332411f75c5f2695c9"
   print('[~] Ejemplo: 14158586273')
   numero = input('[~] Ingresa el numero de telefono: ')
   api = f"http://apilayer.net/api/validate?access_key={key}&number={numero}"
