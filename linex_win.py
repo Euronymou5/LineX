@@ -75,7 +75,7 @@ def info():
           try:
            api5 = f"http://apilayer.net/api/validate?access_key={key5}&number={numero}"
            data5 = requests.get(api5).json()
-           if data4['valid'] == False:
+           if data5['valid'] == False:
              print('\n[!] El numero no es valido!')
            else:
              print('\n[~] Numero: ', data5['number'])
