@@ -14,14 +14,11 @@ logo = """\033[34m ▄▀▀▀▀▄     ▄▀▀█▀▄    ▄▀▀▄ ▀
 def info():
   os.system("clear")
   print(logo)
-  key = "d7afce278cd44bdd33d25552bf9adb57"
-  key1 = "a186ca602e0b2fce38730fbef1a8070b"
-  key3 = "2c4547f4a4097632350d259f086e43a0"
-  key4 = "8edc91f238d8f220bf3a2dc42214c397"
-  key5 = "0d4e34fd0c7aa33ed22b73f0e1c345ad"
+  keys = "https://github.com/Euronymou5/LineX/raw/main/keys.json"
+  data_keys = requests.get(keys).json()
   print('[~] Ejemplo: 14158586273')
   numero = input('[~] Ingresa el numero de telefono: ')
-  api = f"http://apilayer.net/api/validate?access_key={key}&number={numero}"
+  api = f"http://apilayer.net/api/validate?access_key={data_keys['key']}&number={numero}"
   try: 
     data = requests.get(api).json()
     if data['valid'] == False:
@@ -34,7 +31,7 @@ def info():
       print('[~] Transportador: ', data['carrier'])
   except KeyError:
     try:
-      api1 = f"http://apilayer.net/api/validate?access_key={key1}&number={numero}"
+      api1 = f"http://apilayer.net/api/validate?access_key={data_keys['key1']}&number={numero}"
       data1 = requests.get(api1).json()
       if data1['valid'] == False:
        print('\n[!] El numero no es valido!')
@@ -46,7 +43,7 @@ def info():
         print('[~] Transportador: ', data1['carrier'])
     except KeyError:
       try:
-       api3 = f"http://apilayer.net/api/validate?access_key={key3}&number={numero}"
+       api3 = f"http://apilayer.net/api/validate?access_key={data_keys['key2']}&number={numero}"
        data3 = requests.get(api3).json()
        if data3['valid'] == False:
         print('\n[!] El numero no es valido!')
@@ -58,7 +55,7 @@ def info():
          print('[~] Transportador: ', data3['carrier'])
       except KeyError:
         try:
-           api4 = f"http://apilayer.net/api/validate?access_key={key4}&number={numero}"
+           api4 = f"http://apilayer.net/api/validate?access_key={data_keys['key3']}&number={numero}"
            data4 = requests.get(api4).json()
            if data4['valid'] == False:
              print('\n[!] El numero no es valido!')
@@ -70,7 +67,7 @@ def info():
              print('[~] Transportador: ', data4['carrier'])
         except KeyError:
           try:
-           api5 = f"http://apilayer.net/api/validate?access_key={key5}&number={numero}"
+           api5 = f"http://apilayer.net/api/validate?access_key={data_keys['key4']}&number={numero}"
            data5 = requests.get(api5).json()
            if data5['valid'] == False:
              print('\n[!] El numero no es valido!')
