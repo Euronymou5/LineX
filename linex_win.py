@@ -3,7 +3,7 @@ import requests
 import os
 import time
 
-logo = """\033[34m ▄▀▀▀▀▄     ▄▀▀█▀▄    ▄▀▀▄ ▀▄  ▄▀▀█▄▄▄▄  ▄▀▀▄  ▄▀▄ 
+logo = """▄▀▀▀▀▄     ▄▀▀█▀▄    ▄▀▀▄ ▀▄  ▄▀▀█▄▄▄▄  ▄▀▀▄  ▄▀▄ 
 █    █     █   █  █  █  █ █ █ ▐  ▄▀   ▐ █    █   █ 
 ▐    █     ▐   █  ▐  ▐  █  ▀█   █▄▄▄▄▄  ▐     ▀▄▀  
     █          █       █   █    █    ▌       ▄▀ █  
@@ -12,16 +12,31 @@ logo = """\033[34m ▄▀▀▀▀▄     ▄▀▀█▀▄    ▄▀▀▄ ▀
   ▐        ▐       ▐ ▐         ▐         █    ▐   """
 
 def info():
-  os.system("cls")
-  os.system("color 1")
+  os.system("clear")
   print(logo)
   keys = "https://github.com/Euronymou5/LineX/raw/main/keys.json"
   data_keys = requests.get(keys).json()
-  print('[~] Ejemplo: 14158586273')
+  print('[~] Ejemplo: +14158586273')
   numero = input('[~] Ingresa el numero de telefono: ')
-  api = f"http://apilayer.net/api/validate?access_key={data_keys['key']}&number={numero}"
+  payload = {}
+  apikey11 = {
+    "apikey": data_keys['key'],
+  }
+  apikey22 = { 
+    "apikey2": data_keys['key1'],
+  }
+  apikey33 = {
+    "apikey3": data_keys['key2'],
+  }
+  apikey44 = {
+    "apikey4": data_keys['key3'],
+  }
+  apikey55 = {
+    "apikey5": data_keys['key4']
+  }
+  api = f"https://api.apilayer.com/number_verification/validate?number={numero}"
   try: 
-    data = requests.get(api).json()
+    data = requests.request("GET", api, headers=apikey11, data = payload).json()
     if data['valid'] == False:
      print('\n[!] El numero no es valido!')
     else:
@@ -32,8 +47,8 @@ def info():
       print('[~] Transportador: ', data['carrier'])
   except KeyError:
     try:
-      api1 = f"http://apilayer.net/api/validate?access_key={data_keys['key1']}&number={numero}"
-      data1 = requests.get(api1).json()
+      api1 = f"https://api.apilayer.com/number_verification/validate?number={numero}"
+      data1 = requests.request("GET", api1, headers=apikey22, data = payload).json()
       if data1['valid'] == False:
        print('\n[!] El numero no es valido!')
       else:
@@ -44,8 +59,8 @@ def info():
         print('[~] Transportador: ', data1['carrier'])
     except KeyError:
       try:
-       api3 = f"http://apilayer.net/api/validate?access_key={data_keys['key2']}&number={numero}"
-       data3 = requests.get(api3).json()
+       api3 = f"https://api.apilayer.com/number_verification/validate?number={numero}"
+       data3 = requests.request("GET", api3, headers=apikey33, data = payload).json()
        if data3['valid'] == False:
         print('\n[!] El numero no es valido!')
        else:
@@ -56,8 +71,8 @@ def info():
          print('[~] Transportador: ', data3['carrier'])
       except KeyError:
         try:
-           api4 = f"http://apilayer.net/api/validate?access_key={data_keys['key3']}&number={numero}"
-           data4 = requests.get(api4).json()
+           api4 = f"https://api.apilayer.com/number_verification/validate?number={numero}"
+           data4 = requests.request("GET", api4, headers=apikey44, data = payload).json()
            if data4['valid'] == False:
              print('\n[!] El numero no es valido!')
            else:
@@ -68,8 +83,8 @@ def info():
              print('[~] Transportador: ', data4['carrier'])
         except KeyError:
           try:
-           api5 = f"http://apilayer.net/api/validate?access_key={data_keys['key4']}&number={numero}"
-           data5 = requests.get(api5).json()
+           api5 = f"https://api.apilayer.com/number_verification/validate?number={numero}"
+           data5 = requests.request("GET", api5, headers=apikey55, data = payload).json()
            if data5['valid'] == False:
              print('\n[!] El numero no es valido!')
            else:
