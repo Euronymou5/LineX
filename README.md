@@ -1,7 +1,7 @@
 # LineX
 **¿Que es LineX?**
 
-**• R= LineX es una herramienta para sacar datos de un numero de telefono utilizando la API de Numverify**
+**• R= LineX es una herramienta para obtener datos de un numero de telefono utilizando la API de Numverify**
 
 **• Con soporte para 232 Paises**
 
