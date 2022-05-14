@@ -12,7 +12,7 @@ logo = """▄▀▀▀▀▄     ▄▀▀█▀▄    ▄▀▀▄ ▀▄  ▄�
   ▐        ▐       ▐ ▐         ▐         █    ▐   """
 
 def info():
-  os.system("clear")
+  os.system("cls")
   print(logo)
   keys = "https://github.com/Euronymou5/LineX/raw/main/keys.json"
   data_keys = requests.get(keys).json()
