@@ -11,7 +11,7 @@ Antes de utilizarlo, es necesario configurar algunas la clave api de [Numverify]
 
 Una vez obtenida nuestra clave API, es necesario colocar cada una en orden en el archivo  `keys.json`  de la siguiente forma:
 
-```
+```json
 {
    "key": "ReemplazarPorApikeyNumverify"
 }
